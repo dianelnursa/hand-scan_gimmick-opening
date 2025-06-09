@@ -3,7 +3,7 @@ import mediapipe as mp              # Import pustaka MediaPipe untuk deteksi tan
 import numpy as np                  # Import NumPy untuk manipulasi array (opsional)
 
 # Load gambar template tangan dengan alpha channel (transparansi)
-template = cv2.imread('hand_template.png', cv2.IMREAD_UNCHANGED)
+template = cv2.imread('handscan.png', cv2.IMREAD_UNCHANGED)
 template_h, template_w = template.shape[:2]  # Simpan tinggi dan lebar gambar template
 
 # Inisialisasi kamera utama (biasanya webcam laptop)
@@ -104,7 +104,7 @@ while cap.isOpened():
     # Jika semua syarat terpenuhi dan video belum diputar
     if should_play_video and not video_playing:
         video_playing = True
-        video = cv2.VideoCapture('vid.mp4')  # Buka file video
+        video = cv2.VideoCapture('play.mp4')  # Buka file video
         while video.isOpened():
             ret_vid, frame_vid = video.read()
             if not ret_vid:
