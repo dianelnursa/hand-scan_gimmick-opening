@@ -6,7 +6,7 @@ import numpy as np                  # Import NumPy untuk manipulasi array (opsio
 template = cv2.imread('handscan.png', cv2.IMREAD_UNCHANGED)
 template_h, template_w = template.shape[:2]  # Simpan tinggi dan lebar gambar template
 
-# Inisialisasi kamera utama (biasanya webcam laptop)
+# Inisialisasi kamera
 cap = cv2.VideoCapture(0)
 
 # Inisialisasi modul deteksi tangan dari MediaPipe
